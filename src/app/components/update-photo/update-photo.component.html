@@ -1,0 +1,29 @@
+<div>
+    <div class="submit-form">
+        <form>
+            <div class="form-group">
+                <label for="albumId">Album ID</label>
+                <input type="number" class="form-control" id="albumId" required [(ngModel)]="photo.albumId"
+                    name="albumId" />
+            </div>
+
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" required [(ngModel)]="photo.title" name="title" />
+            </div>
+
+            <div class="form-group">
+                <label for="url">URL</label>
+                <input class="form-control" id="url" required [(ngModel)]="photo.url" name="url" />
+            </div>
+
+            <div class="form-group">
+                <label for="thumbnailUrl">Thumbnail URL</label>
+                <input class="form-control" id="thumbnailUrl" required [(ngModel)]="photo.thumbnailUrl"
+                    name="thumbnailUrl" />
+            </div>
+
+            <button (click)="updatePhoto()" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</div>

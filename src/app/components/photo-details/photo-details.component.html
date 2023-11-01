@@ -1,0 +1,13 @@
+<div>
+    <div *ngIf="photo" class="d-flex">
+        <div>
+            <h3>{{photo.title}}</h3>
+            <h6>Album ID: {{photo.albumId}}</h6>
+            <img [src]="photo.url" [alt]="photo.title">
+
+        </div>
+        <button class="btn btn-primary h-25 mx-5 mt-5" [routerLink]="['/photos', photo.id, 'edit']">Edit</button>
+        <button class="btn btn-danger h-25 mt-5" (click)="deletePhoto()">Delete</button>
+
+    </div>
+</div>
